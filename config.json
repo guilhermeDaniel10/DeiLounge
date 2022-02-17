@@ -1,0 +1,10 @@
+﻿{
+    "database": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "guibfd10",
+        "database": "dei-lounge"
+    },
+    "secret": "34962d655b714dc7b372b59510303019ak1kjaidhu81231gasd87"
+}
