@@ -6,6 +6,7 @@ function model(sequelize) {
     const attributes = {
         nome: { type: DataTypes.STRING, allowNull: false },
         abreviacao: { type: DataTypes.STRING, allowNull: false},
+        ano: { type: DataTypes.INTEGER, allowNull: false},
         curso: { type: DataTypes.INTEGER, allowNull: false, 
         references: {
             model: 'cursos',

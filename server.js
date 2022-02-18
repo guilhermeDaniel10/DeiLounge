@@ -12,6 +12,7 @@ app.use(cors());
 // api routes
 app.use('/users', require('./users/users.controller'));
 app.use('/cursos', require('./cursos/curso.controller'));
+app.use('/unidadescurriculares', require('./unidades_curriculares/unidadecurricular.controller'));
 
 // global error handler
 app.use(errorHandler);

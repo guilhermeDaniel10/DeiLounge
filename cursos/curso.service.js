@@ -23,11 +23,11 @@ async function getById(id) {
 async function create(params) {
   // validate
   if (await db.Curso.findOne({ where: { nome: params.nome } })) {
-    throw 'Nome "' + params.username + '" is already taken';
+    throw 'Nome "' + params.nome + '" is already taken';
   }
 
   if (await db.Curso.findOne({ where: { abreviacao: params.abreviacao } })) {
-    throw 'Abreviacao "' + params.email + '" is already taken';
+    throw 'Abreviacao "' + params.abreviacao + '" is already taken';
   }
 
   // save curso
@@ -53,7 +53,7 @@ async function update(id, params) {
     abreviacaoChanged &&
     (await db.Curso.findOne({ where: { abreviacao: params.abreviacao } }))
   ) {
-    throw 'Abreviacao "' + params.curso + '" is already taken';
+    throw 'Abreviacao "' + params.abreviacao + '" is already taken';
   }
 
   // copy params to curso and save
